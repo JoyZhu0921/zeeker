@@ -4,7 +4,7 @@
         <div class="hero-text">
             <h1>Co-Creating the Ultimate Experiences</h1>
             <p>In a life of pure mobility</p>
-            <el-button round class="about-btn">About Zeekr</el-button>
+            <el-button round class="about-btn" @click="topage('aboutus')">About Zeekr</el-button>
         </div>
       </section>
       <section class="section section-2">
@@ -19,22 +19,33 @@
             <p class="highlight-text"><span class="black-text">We are </span><span class="orange-text">Zeekr.</span></p>
         </div>
       </section>
-  
       <section class="section section-4">
         <div class="section-4-text">
             <p>Explore Our Models</p>
         </div>
       </section>
-  
-     
-      <section class="section section-5"></section>
-  
-     
-      <section class="section section-6"></section>
-  
-     
+      <section class="section section-5">
+        <div class="section-5-content">
+            <h1 class="zeekr-title">ZEEKR X</h1>
+            <p class="zeekr-subtitle">Luxury Urban Cross SUV</p>
+            <div class="zeekr-buttons-l">
+                <el-button round class="transparent-btn">Learn More</el-button>
+                <el-button round class="light-btn">Book a Test Drive</el-button>
+            </div>
+        </div>
+      </section>
+      <section class="section section-6">
+        <div class="section-6-content">
+            <h1 class="zeekr-title">ZEEKR 009</h1>
+            <p class="zeekr-subtitle">Pure Electric Luxury MPV</p>
+            <div class="zeekr-buttons-r">
+                <el-button class="transparent-btn" round>Learn More</el-button>
+                <el-button class="light-btn" round>Book a Test Drive</el-button>
+            </div>
+        </div>
+      </section>
       <section class="section section-7">
-        <h2>Latest News</h2>
+        <p>Latest News</p>
       </section>
   
    
@@ -65,7 +76,11 @@
   </template>
   
   <script setup>
- 
+ import { useRouter } from 'vue-router';
+ const router = useRouter()
+ function topage(path) {
+  router.push(`/${path}`)
+}
   </script>
   
   <style scoped>
@@ -190,7 +205,6 @@
   width: 100%;
   min-height: 300px;
 }
-
 .section-4-text {
     color: #000;
     text-align: center;
@@ -199,25 +213,95 @@
     font-weight: 400;
     line-height: normal;
 }
-  .section-5 {
-    background-image: url('@/assets/home4.png');
-  }
-  
-  .section-6 {
-    background-image: url('@/assets/home5.png');
-  }
-  
-  .section-7 {
-    background-color: #fff;
-    padding: 60px 24px;
-    text-align: center;
-  }
-  
-  .section-7 h2 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #000;
-  }
+.section-5 {
+  background-image: url('@/assets/home4.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 100px 60px;
+  color: #fff;
+}
+.section-5-content {
+  max-width: 1000px;
+}
+.zeekr-title {
+  color: #FFF;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.zeekr-subtitle {
+  color: #FFF;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.zeekr-buttons-l {
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+}
+.transparent-btn {
+  background-color: transparent;
+  border-color: #FFFFFF;
+  color: #fff;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.light-btn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+} 
+.section-6 {
+  background-image: url('@/assets/home5.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 100px 60px;
+  color: #fff;
+}
+
+.section-6-content {
+  max-width: 1000px;
+  text-align: right;
+}
+.zeekr-buttons-r {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+.section-7 {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  min-height: 300px;
+}
+.section-7 p {
+  color: #000;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
   
   .section-8 {
     background-color: #fff;
