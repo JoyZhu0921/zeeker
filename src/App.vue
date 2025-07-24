@@ -1,11 +1,15 @@
 <template>
     <div class="mainpage">
         <Header></Header>
+        <router-view />
+        <Fooder></Fooder>
     </div>
+
 </template>
 
 <script setup>
     import Header from '@/components/headerl.vue';
+    import Fooder from '@/components/fooder.vue';
 </script>
 
 <style>

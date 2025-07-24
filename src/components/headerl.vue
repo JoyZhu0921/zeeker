@@ -1,10 +1,10 @@
 <template>
   <header class="navbar">
     <div class="nav-left">
-      <img src="@/assets/logo.png" alt="Logo" class="icon" style="width: 28px; height: 28px; flex-shrink: 0;" />
+      <img src="@/assets/logo.png" alt="Logo" class="icon" @click="topage('/')" style="width: 28px; height: 28px; flex-shrink: 0; cursor: pointer;" />
       <nav class="nav-links">
         <p>Models</p>
-        <p>About Us</p>
+        <p @click="topage('aboutus')">About Us</p>
         <p>News</p>
         <p>Stock</p>
       </nav>
@@ -27,6 +27,11 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router';
+const router = useRouter()
+function topage(path) {
+  router.push(`/${path}`)
+}
 </script>
 
 <style scoped>
@@ -35,10 +40,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
+  padding: 27px 24px;
   background-color: black;
   color: #FFF;
-  font-family: "Zeekr Text", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -54,6 +58,7 @@
 }
 .nav-links p {
   margin-left: 20px;
+  cursor: pointer;
 }
 .nav-links{
   text-decoration: none;
@@ -75,6 +80,7 @@
 .language-select {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .language-icon {
