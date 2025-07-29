@@ -30,7 +30,7 @@
             <p class="zeekr-subtitle">Luxury Urban Cross SUV</p>
             <div class="zeekr-buttons-l">
                 <el-button round class="transparent-btn">Learn More</el-button>
-                <el-button round class="light-btn">Book a Test Drive</el-button>
+                <el-button round class="light-btn" @click="topage('bookZeekrX')" >Book a Test Drive</el-button>
             </div>
         </div>
       </section>
@@ -40,7 +40,7 @@
             <p class="zeekr-subtitle">Pure Electric Luxury MPV</p>
             <div class="zeekr-buttons-r">
                 <el-button class="transparent-btn" round>Learn More</el-button>
-                <el-button class="light-btn" round>Book a Test Drive</el-button>
+                <el-button class="light-btn" round @click="topage('bookZeekr10')" >Book a Test Drive</el-button>
             </div>
         </div>
       </section>
