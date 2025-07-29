@@ -47,31 +47,48 @@
       <section class="section section-7">
         <p>Latest News</p>
       </section>
-  
-   
+
       <section class="section section-8">
         <div class="picture-grid">
           <div class="picture-card">
             <img src="@/assets/picture1.png" alt="Picture 1" />
-            <p>内容 1</p>
+            <div class="news-content">
+              <p class="news-date">February 24 2025</p>
+              <p class="news-title">Zeekr Brings the Ultimate EV Experience to Everything Electric Sydney</p>
+              <p class="news-link">Read More</p>
+            </div>
           </div>
           <div class="picture-card">
             <img src="@/assets/picture2.png" alt="Picture 2" />
-            <p>内容 2</p>
+            <div class="news-content">
+              <p class="news-date">February 24 2025</p>
+              <p class="news-title">Zeekr Brings the Ultimate EV Experience to Everything Electric Sydney</p>
+              <p class="news-link">Read More</p>
+            </div>
           </div>
           <div class="picture-card">
             <img src="@/assets/picture3.png" alt="Picture 3" />
-            <p>内容 3</p>
+            <div class="news-content">
+              <p class="news-date">January 14 2025</p>
+              <p class="news-title">ZEEKR X Recognised as a Top Safety Performer in Australia and Europe</p>
+              <p class="news-link">Read More</p>
+            </div>
           </div>
           <div class="picture-card">
             <img src="@/assets/picture4.png" alt="Picture 4" />
-            <p>内容 4</p>
+            <div class="news-content">
+              <p class="news-date">September 21 2024</p>
+              <p class="news-title">Secure Your Zeekr: Launch Offer Extended</p>
+              <p class="news-link">Read More</p>
+            </div>
           </div>
         </div>
       </section>
-  
-      
-      <section class="section section-9"></section>
+      <section class="section section-9">
+        <div class="LoadMore">
+            <el-button round class="about-btn-1">Load More</el-button>
+        </div>
+      </section>
     </div>
   </template>
   
@@ -90,7 +107,6 @@
 }
 .section {
   width: 100%;
-  min-height: 100vh;
   background-size: cover;
   background-position: center;
 }  
@@ -103,6 +119,7 @@
   padding: 100px 24px;
   color: #fff;
   width: 100%;
+  min-height: 100vh;
 }
 .hero-text {
   width: 100%;
@@ -137,6 +154,7 @@
   line-height: normal;
 }
 .section-2 {
+  min-height: 100vh;
   background-image: url('@/assets/home2.png');
   display: flex;
   justify-content: center;
@@ -176,7 +194,6 @@
 }
 .main-text {
   color: #000;
-  font-family: "Zeekr Headline", sans-serif;
   font-size: 45px;
   font-style: normal;
   font-weight: 400;
@@ -188,7 +205,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  font-family: "Zeekr Headline", sans-serif;
 }
 .black-text {
   color: #000;
@@ -221,6 +237,7 @@
   align-items: center;
   padding: 100px 60px;
   color: #fff;
+  min-height: 100vh;
 }
 .section-5-content {
   max-width: 1000px;
@@ -265,6 +282,7 @@
   line-height: normal;
 } 
 .section-6 {
+  min-height: 100vh;
   background-image: url('@/assets/home5.png');
   background-size: cover;
   background-position: center;
@@ -303,33 +321,82 @@
   line-height: normal;
 }
   
-  .section-8 {
-    background-color: #fff;
-    padding: 60px 24px;
-  }
-  
-  .picture-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .picture-card {
-    flex: 1;
-    min-width: 200px;
-    text-align: center;
-  }
-  
-  .picture-card img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 12px;
-  }
-  
-  .section-9 {
-    background-color: #fff;
-    height: 120px;
-  }
+.section-8 {
+  background-color: #fff;
+  padding: 20px 0 32px;
+}
+.picture-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.picture-card {
+  flex: 1;
+  min-width: 200px;
+  max-width: 25%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+}
+.picture-card:last-child {
+  border-right: none;
+}
+.picture-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px; 
+  border-bottom: 1px solid #DDD;
+}
+.news-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  flex-grow: 1;
+  height: 100%;
+  padding: 0 24px 32px; 
+  text-align: left;;
+}
+.news-date {
+  color: #000;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.news-title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: auto;
+}
+.news-link {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.section-9 {
+  background-color: #fff;
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.LoadMore {
+  text-align: center;
+}
+.about-btn-1 {
+  border-radius: 35px;
+  background: #000;
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
   </style>
   
