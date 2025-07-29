@@ -1,7 +1,7 @@
 <template>
   <header class="navbar">
     <div class="nav-left">
-      <img src="@/assets/logo.png" alt="Logo" class="icon" @click="topage('/')" style="width: 28px; height: 28px; flex-shrink: 0; cursor: pointer;" />
+      <img src="@/assets/logo.png" alt="Logo" class="icon" @click="topage('')" style="width: 28px; height: 28px; flex-shrink: 0; cursor: pointer;" />
       <nav class="nav-links">
         <p>Models</p>
         <p @click="topage('aboutus')">About Us</p>

@@ -103,7 +103,6 @@
   <style scoped>
 .home-page {
   width: 100%;
-  font-family: "Zeekr Text", sans-serif;
 }
 .section {
   width: 100%;
